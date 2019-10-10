@@ -1,0 +1,138 @@
+.detail_location{ height:22px;}
+.detail_location span{color:black;}
+.detail_location a{color:#ccc;margin-right:10px;}
+.tit_link{height:46px;}
+.tit_link h2{
+	height:46px;
+	width:auto;
+	line-height:46px;
+	font-size:18px;
+	margin-left:20px;
+	display: block;
+	float:left;
+	font-weight:bold;
+}
+.tit_link ul{
+	display:block;
+	width:480px;
+	height:45px;
+	float:right;
+}
+
+.tit_link ul li{
+	width:auto;
+	height:45px;
+	float:left;
+	margin-left:15px;
+}
+.tit_link ul li a{
+	display:block;    
+	font-family: 微软雅黑;
+	height:45px;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    line-height:45px;
+}
+/*商品全部信息*/
+.goodinfo{height:426px;}
+.goodinfo .goodimage{width:634px;height:426px;}
+.goodinfo .goodimage .small li{display:block;width:70px;height:70px;border:1px solid #ccc;margin-bottom:20px;}
+.goodinfo .goodimage .small li:hover{border:1px solid red;}
+.goodinfo .goodimage .big{margin-top:14px;margin-right:80px;}
+/*all*/
+.goodinfo .goodall{width:561px;height:426px;}
+.goodinfo .goodall .price{width:561px;height:53px;}
+.goodinfo .goodall .price span{font-size:15px;color:#a10000;}
+.goodinfo .goodall .price strong{font-size:25px;color:#a10000;font-weight:normal;line-height: 53px;}
+
+.goodinfo .goodall .danpinColor_Select{width:561px;height:50px;}
+.goodinfo .goodall .danpinColor_Select .color p{color:#ccc;}
+.goodinfo .goodall .danpinColor_Select ul>li>div{width:93px;height:38px;border:1px solid #ccc;margin-right:10px;}
+.goodinfo .goodall .danpinColor_Select ul>li>div:hover{width:93px;height:38px;border:1px solid red;}
+.goodinfo .goodall .danpinColor_Select ul li {float:left;}
+.goodinfo .goodall .danpinColor_Select ul li div span{float:left;width:36px;height:36px;display:inline-block;}
+.goodinfo .goodall .danpinColor_Select ul li div span img{height:36px;width:36px;}
+.goodinfo .goodall .danpinColor_Select ul li div p{float:left;margin-left:5px;line-height:38px;}
+
+.size{height:31px;width:561px;}
+.size p{width:auto;height:22px;font-size:12px;display:block;float:left;color:#ccc;line-height:22px;}
+.size .sizezhi{border:1px solid #ccc;padding:0 10px;margin-right:10px;}
+.size .sizezhi:hover{border:1px solid #a10000;padding:0 10px;margin-right:10px;}
+
+.other{height:31px;width:561px;}
+.other p{width:auto;height:22px;font-size:12px;display:block;float:left;color:#ccc;line-height:22px;}
+.other .zhi{border:1px solid #ccc;padding:0 10px;margin-right:10px;}
+.other .zhi:hover{border:1px solid #a10000;padding:0 10px;margin-right:10px;}
+
+.goodnum{height:35px;width:561px;}
+.goodnum p{width:auto;height:22px;font-size:12px;display:inline-block;color:#ccc;line-height:22px;}
+
+.selectedgood{height:22px;width:400px;}
+.selectedgood p{width:auto;height:22px;font-size:12px;display:inline-block;color:#ccc;line-height:22px;}
+.selectedgoodp1,.selectedgoodp2{margin-left:10px;}
+.selectedgood .selectedgoodp1{color:black;}
+.selectedgood .selectedgoodp2{color:#a10000;}
+
+.shoppingnews{width:349px;height:33px;}
+.shoppingnews .shoppingnow{font-size:15px;color:white;display:inline-block;border:1px solid #a10000;background:#f7abaf;width:168px;height:31px;line-height:31px;text-align:center;margin-right:9px;}
+.shoppingnews .addshopingcar{font-size:15px;color:white;display:inline-block;background:#a10000;width:168px;height:33px;line-height:33px;text-align:center;}
+
+.youhui{width:400px;height:14px;}
+.youhui .qianheng{width:150px;height:2px;background: #a10000;margin-top:12px;}
+.youhui .zhongwen{width:64px;height:14px;text-align:center;line-height:14px;color:black;font-weight:bold;}
+.youhui .qianheng{width:150px;height:2px;background: #a10000;margin-top:12px;}
+.youhuihelp{width:400px;height:24px;margin:5px 0;}
+.youhuihelp ul li{height:24px;font-size:12px;text-align:left;line-height:12px;padding-top:4px;}
+.youhuidibu{width:400px;height:2px;background: #a10000;}
+
+
+/*模特搭配*/
+.mode{width:1200px;height:auto;}
+.mode .pic{text-align:center;margin:20px auto;}
+
+/*评论*/
+.pinglun{height:auto;}
+.pinglun .hotproduct{width:192px;}
+.pinglun .hotproduct .hotgoods{width:192px;height:41px;border:1px solid #ccc;}
+.pinglun .hotproduct .hotgoods p{color:black;text-align:left;height:41px;line-height:41px;padding-left:40px;}
+/*商品推荐样式*/
+.pinglun .hotproduct .hotgoodslist{width:192px;height:30px;border:1px solid #ccc;}
+
+.pinglun .pinglunmsgs{width:980px;height:auto;border:1px solid #ccc;}
+.pinglun .pinglunmsgs .hottitle{width:980px;height:41px;border:1px solid #ccc;}
+.pinglun .pinglunmsgs .hottitle .tit{width:916px;height:41px;margin:0 auto;font-size:14px;line-height:41px;}
+.pinglun .pinglunmsgs .hottitle .tit span{margin-left:5px;}
+.pinglun .pinglunmsgs .hottitle .tit .dopinglun{display:inline-block;width:120px;height:33px;background:#d46a6a;vertical-align:middle;margin-left:560px;text-align:center;line-height:33px;}
+.pinglun .pinglunmsgs .hottitle .tit .dopinglun a{color:white;}
+.pinglun .pinglunmsgs .hottitle .tit input{margin-left:5px;}
+
+
+.pinglun .pinglunmsgs .pingluncontent{width:916px;height:165px;margin:0 auto;font-size:14px;line-height:41px;border-bottom:1px dashed #ccc;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef{width:759px;height:165px;border-right:1px dashed #ccc;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef .pinlunCon1{width:610px;height:165px;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef .pinlunCon2{width:129px;height:165px;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef .pinlunCon1 p{
+	font-size:15px;margin-top:20px;
+}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef .pinlunCon1 span{
+	font-size:12px;margin-top:10px;color:#ccc;
+}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef .pinlunCon2 span{
+	font-size:12px;color:black;display:block;width:128px;height:29px;line-height:29px;
+}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabLef .pinlunCon2 span:first-child{margin-top:20px;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabrgt{width:156px;height:165px;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabrgt p{font-size:15px;margin-top:40px;text-align:center;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabrgt a{color:black;}
+.pinglun .pinglunmsgs .pingluncontent .pinglunTabrgt div{margin:0 auto;background:url(../image/userlevelgrowth_42_14.jpg) no-repeat 0px -14px;}
+
+.pinglun .pinglunmsgs .pinglunpages{
+	height:50px;width:916px;margin:0 auto;
+}
+.pinglun .pinglunmsgs .pinglunpages p{text-align:right;line-height:50px;}
+.pinglun .pinglunmsgs .pinglunpages p a{margin-left:6px;}
+
+.other{
+
+}

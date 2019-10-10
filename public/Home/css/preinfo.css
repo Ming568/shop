@@ -1,0 +1,105 @@
+
+.warper{
+	width:980px;
+	margin-top:8px;
+	margin:0 auto;
+}
+
+#warper span{color:#888;}
+#warper span a{color:#888;}
+#warper span a:hover{color:#a00000;}
+
+.preinfo_bg{width:980px;height:auto;margin-top:5px;}
+.preinfo_bg .side_nav{width:180px;}
+.preinfo_bg .my_order{width:780px;height:auto;}
+.side_nav h2{
+	width:148px;
+	height:28px;
+	background:url(../image/01.jpg) no-repeat 35px 5px;
+	display: block;
+	padding-left:30px;
+	line-height:28px;
+	text-indent: 2em;
+	border:1px solid #eee;
+}
+.side_nav a{font-weight:bold;color:black;}
+.side_nav ul{
+	display:block;
+	margin-top:10px;
+}
+.side_nav ul li{
+	border:1px solid #ccc;
+}
+.side_nav ul li a{
+	display:block;
+	height:24px;
+	width:148px;
+	background: white;
+	line-height:24px;
+	padding-left:30px;
+	font-style:normal;
+	font-weight:normal;
+}
+.side_nav ul li b{display:none;}
+.side_nav ul li a:hover{color:#a00000;}
+.side_nav ul li a:hover b{display:inline-block;}
+.side_nav h3{
+	display:block;
+	background:#787878; 
+	height:30px;
+	width:178px;
+	line-height:30px;
+	text-align:center;
+	font-style:bold;
+	color:white;
+	
+}
+#now{
+	color:#a00000;
+}
+
+.my_order .order_local_head{
+	width:100%;
+	height:24px;
+}
+.my_order .order_local_head span{display:inline-block;float:left;font-size:14px;font-weight:normal;line-height:22px;height:22px;border-bottom:2px solid #a00000;padding-left:10px;}
+.my_order .order_local_head a{display:inline-block;float:right;line-height:24px;height:24px;color:#a00000;background: url(../image/pic_my.jpg) no-repeat left center;padding-left:20px;margin-right:20px;}
+
+.my_order .order_staus{margin-top:15px;width:100%;height:auto;}
+.my_order .order_staus .order_staus_head{width:100%;height:30px;border-bottom:2px solid #a00000;}
+.my_order .order_staus .order_staus_head a{display:block;height:28px;width:91px;float:left;line-height:28px;text-align:center;background:#f8f8f8;border:1px solid #eee;margin-right:5px;border-radius: 2px;}
+.my_order .order_staus .order_staus_head .now{background:#a00000;color:white;border:1px solid #a00000;}
+.my_order .order_staus .order_staus_head select{display:block;height:19px;width:91px;float:right;line-height:19px;text-align:center;margin-left:100px;margin-top:10px;}
+.order_staus_headr{margin-left:20px;}
+.my_order .order_staus .order_staus_foot{width:100%;height:50px;margin-top:10px;font-size:12px;}
+.my_order .order_staus .order_staus_foot span a{margin-left:30px;color:black;}
+.my_order .order_staus .order_staus_foot .list{margin-top:5px;border:1px solid #ccc;}
+.my_order .order_staus .order_staus_foot .list .listhead{height:29px;background:#f6f4f5;}
+.my_order .order_staus .order_staus_foot .list .listhead span{height:29px;line-height:29px;margin-left:5px;}
+.my_order .order_staus .order_staus_foot .list .listhead b{height:29px;line-height:29px;margin-left:230px;}
+.my_order .order_staus .order_staus_foot .list .listhead strong{height:29px;line-height:29px;margin-left:15px;}
+.my_order .order_staus .order_staus_foot .list .listhead em{height:29px;line-height:29px;margin-left:230px;font-style:normal;}
+.my_order .order_staus .order_staus_foot .list .listfoot{height:auto;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div1{height:auto;line-height:55px;width:13px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div2{height:auto;;width:120px;margin-left:50px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div2 a{height:55px;line-height:55px;width:120px;color:#a00000;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div3{height:auto;line-height:55px;width:180px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div3 img{height:50px;width:50px;border:1px solid #ccc;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div4{height:auto;line-height:55px;width:149px;margin-left:50px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div4 span{display:block;color:#a00000;height:12px;margin-top:10px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div4 b{display:block;color:black;height:12px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div5{display:block;height:50px;line-height:50px;}
+.my_order .order_staus .order_staus_foot .list .listfoot .div6{display:block;height:50px;line-height:50px;margin-left:100px;}
+
+
+/*商品推荐*/
+.goodrecommend{margin-top:20px;border:1px solid #ccc;}
+.goodrecommend .tit{padding-left:20px;width:758px;height:27px;background:#fafafa;display:block;line-height:27px;}
+.goodrecommend .good_recommend_list{
+	height:auto;width:100%;border:1px solid #ccc;
+}
+.goodrecommend .good_recommend_list a{
+	display:block;width:180px;height:240px;background: #ccc;float:left;margin-left:12px;margin-top:10px;
+}
+.goodrecommend .good_recommend_list img{width:180px;height:240px;}
+

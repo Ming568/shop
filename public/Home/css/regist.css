@@ -1,0 +1,24 @@
+/*注册图片*/
+.registcenter{height:auto;}
+/*左*/
+.registcenter .registimg{width:auto;height:471px;}
+.registcenter .registimg img{width:465px;height:352px;margin-left:102px;margin-top:40px;}
+/*右*/
+.registcenter .registfom{height:auto;width:415px;margin-right:103px;}
+.registcenter .registfom .tishi{height:25px;margin-bottom:5px;}
+.registcenter .registfom .tishi h3{font-size:18px;display:inline-block;font-weight:bold;color:#ccc;float:left;}
+.registcenter .registfom .tishi span{font-size:12px;display:inline-block;color:#ccc;float:right;height:25px;line-height:25px;}
+.registcenter .registfom .tishi span a{font-size:12px;color:#ccc;float:right;height:25px;line-height:25px;color:#b42025;}
+.registcenter .registfom .regist_formdiv .very{width:415px;height:45px;margin-top:20px;}
+.registcenter .registfom .regist_formdiv .very .inputshort{width:262px;height:43px;vertical-align:middle;}
+.registcenter .registfom .regist_formdiv .very img{width:140px;height:45px;vertical-align:middle;margin-left:4px;}
+.registfom .regist_formdiv .verytwo{width:415px;height:45px;margin-top:20px;}
+.registcenter .registfom .regist_formdiv .verytwo .inputshort{width:262px;height:43px;vertical-align:middle;}
+.registcenter .registfom .regist_formdiv .verytwo a{width:142px;height:47px;background: #f5f5f5;display:inline-block;vertical-align:middle;text-align:center;line-height:47px;}
+.registcenter .registfom .regist_formdiv .putong{width:410px;height:45px;margin-top:20px;}
+.registfom .regist_formdiv .verytree{width:415px;height:45px;margin-top:20px;}
+.registfom .regist_formdiv .verytree span{font-size:12px;color:#ccc;}
+.registfom .regist_formdiv .verytree a{font-size:12px;color:#b52024;}
+.registfom .regist_formdiv input[type=submit]{
+	width:410px; height:47px;background:#b52024;color:white; font-size:16px;
+}

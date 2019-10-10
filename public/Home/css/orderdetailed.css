@@ -1,0 +1,21 @@
+.order_detailed_kuang{border:5px solid #f1f1f1;border-radius:5px;}
+.order_detailed_kuang .hao{display:block;width:740px;height:20px;line-height:20px;margin:15px auto;font-size:15px;color:#a00000;padding-bottom:15px;border-bottom:1px dashed #ccc;}
+.order_detailed_kuang h3{width:740px;height:24px;margin:0px auto;display:block;border-bottom:1px solid #ccc;}
+.order_detailed_kuang .orderdetailedinfo span{width:98px;height:22px;display:block;border-bottom:2px solid #a00000;font-size:15px;line-height:22px;text-align:center;font-weight:bold;}
+
+.order_detailed_kuang ul{width:740px;margin:15px auto;}
+.order_detailed_kuang ul li{font-size:12px;color:#aaa;}
+
+.order_detailed_kuang table{width:740px;margin:15px auto;border:1px solid #ccc;}
+.order_detailed_kuang table tr{height:50px;}
+.order_detailed_kuang .danpin_names{font-size:15px;color:white;background:#666;text-align:center;}
+.order_detailed_kuang .danpin_names td{border-left:1px solid white;}
+.order_detailed_kuang .danpin_values{font-size:12px;color:#aaa;}
+.order_detailed_kuang .danpin_values .Commodity-list{border-bottom:1px solid #ccc;}
+
+.back_order{width:740px;margin:15px auto;}
+.back_order p{text-align:right;margin-right:10px;}
+.back_order a{color:#a00000;}
+
+
+

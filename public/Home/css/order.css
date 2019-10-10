@@ -1,0 +1,53 @@
+.myorder{height:auto;width:980px;margin:0 auto;}
+
+.myorder .step{font-size:0px;}
+.myorder .step span{display:inline-block;width:170px;height:28px;background:#eee;text-align:center;line-height:28px;margin-left:0px;}
+.myorder .step .stepnow{background:#a00000;color:white;}
+.cartop{width:980px;height:30px;margin-top:5px;}
+.cartop h2{font-size:18px;line-height:30px;display:inline-block;vertical-align:middle;font-weight:bold;}
+.cartop h3{display: inline-block;width:38px;height:30px;background:url(../image/newpromotion.gif) no-repeat -460px 0px;vertical-align:middle;}
+
+.myorder .tip{margin-top:5px;}
+.myorder .tip p{color:black;}
+.myorder .tip span{color:#a00000;}
+
+.model{margin-top:20px;}
+.model .modelleft{width:150px;height:28px;background:#eee;}
+.model .modelleft p{width:150px;height:28px;line-height:25px;font-weight:bold;text-align:center;}
+.model .modelright{width:413px;height:28px;}
+.model .modelright input{width:413px;height:24px;}
+
+.order_list_head{margin-top:20px;}
+.order_list_head .ttt {background: #eee;display: block;font-size:12px;font-weight:bold;height:35px;line-height:35px;padding-left:20px;}
+.order_list_head .fff{display: block;font-size:12px;font-weight:bold;height:30px;line-height:30px;padding-left:20px;}
+.order_list_head .fff .road{margin-left:20px;}
+.order_list_head .fff .road em{color:#a00000;margin:auto 5px;font-style:normal;}
+
+.order_list_table{margin-top:20px;border:1px solid #ccc;}
+.order_list_table table{width:980px;height:auto;}
+.order_list_table .order_table_head{width:980px;height:30px;background:#7a7f89;font-size:12px;line-height:30px;text-align:center;color:white;}
+.order_table_body .ordersize,.order_table_body .orderprice,.order_table_body .orderzhe,.order_table_body .ordernum,.order_table_body .ordersum{
+	text-align:center;font-size:12px;color:black;
+}
+.order_table_foot{text-align:right;font-size:12px;color:black;border:1px solid #ccc;padding-top:5px;}
+.order_table_foot em{color:#a00000;font-style: normal;}
+
+.order_list_checkall{margin-top:10px;}
+.order_list_checkall span{color:black;font-size:12px;}
+.order_list_checkall p{color:#a00000;font-size:16px;text-align:right;}
+.order_list_checkall em{font-size:30px;font-style:normal;font-weight:bold;}
+
+.order_form_sub{margin-top:10px;}
+.order_form_sub p{display:inline-block;width:620px;height:51px;line-height:51px;text-align:center;background:#fffef5;border:1px solid #ccc;}
+.order_form_sub input{
+	display:inline-block;
+	background:url(../image/sprite.gif) no-repeat 0px -42px;
+	width:150px;
+	height:41px;
+	margin-top:10px;
+	font-size:28px;
+	color:white;
+	font-weight:normal;
+	margin-left:16px;
+}
+

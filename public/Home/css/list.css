@@ -1,0 +1,148 @@
+.listtable{height:auto;margin-top:25px;}
+/*列表头部内容*/
+.loctionl{width:50%;height:40px;}
+.loctionl span{font-size:12px;color:#ccc;line-height:40px;}
+.loctionl a{font-size:12px;color:black;text-indent: 1em;line-height:40px;}
+.loctionr{width:49%;height:40px;}
+.loctionr span{font-size:12px;color:#ccc;line-height:40px;padding-left:450px;}
+.loctionr em{color:#b81c22;}
+/*列表标签*/
+.childlist{border:1px solid #ccc;}
+.listtag{height:34px;border-bottom:1px dashed #ccc;}
+.childlist .listtag .tag p{font-size:12px;color:black;text-indent: 1em;line-height:34px;}
+.childlist .listtag .child p{font-size:12px;color:black;text-indent: 1em;line-height:34px;display:inline-block;}
+.childlist .listtag .child span{font-size:12px;color:#ccc;text-indent: 1em;line-height:34px;}
+.listtag .tag{width:66px;height:34px;border-right:1px solid #ccc;}
+.listcolor{height:27px;background: #ededed;}
+.childlist .listcolor span{font-size:12px;color:#73737a;line-height:19px;margin-left:1em;display: inline-block;}
+.childlist .listcolor span a{font-size:12px;color:#73737a;line-height:19px;display: inline-block;border:1px solid red;}
+.childlist .listcolor .a1{width:19px;height:19px;display: inline-block;background: black;border:1px dashed #ccc;}
+.childlist .listcolor .a2{width:19px;height:19px;display: inline-block;background: white;border:1px dashed #ccc;}
+.childlist .listcolor .a3{width:19px;height:19px;display: inline-block;background: red;border:1px dashed #ccc;}
+.childlist .listcolor .a4{width:19px;height:19px;display: inline-block;background: green;border:1px dashed #ccc;}
+.childlist .listcolor .a5{width:19px;height:19px;display: inline-block;background: blue;border:1px dashed #ccc;}
+.childlist .listcolor .a6{width:19px;height:19px;display: inline-block;background: yellow;border:1px dashed #ccc;}
+.childlist .listcolor .a7{width:19px;height:19px;display: inline-block;background: gray;border:1px dashed #ccc;}
+.childlist .listcolor .a8{width:19px;height:19px;display: inline-block;background: purple;border:1px dashed #ccc;}
+.childlist .listcolor .a9{width:19px;height:19px;display: inline-block;background: orange;border:1px dashed #ccc;}
+.childlist .listcolor .a10{width:19px;height:19px;display: inline-block;background: pink;border:1px dashed #ccc;}
+.childlist .listcolor a:hover{border:1px solid #b81c22;}
+/*select*/
+.select{height:70px;margin-top:10px;border-bottom: 1px solid #ccc;}
+.selectup{height:32px;border-bottom: 2px solid #b81c22;}
+.select .selectup .all{height:32px;width:88px;background: #b81c22;}
+.select .selectup .all p{color:white;font-size:12px;line-height:32px;text-align:center;}
+.select .selectup .page{height:32px;width:130px;}
+.select .selectup .page span{height:32px;line-height:32px;font-size:12px;color:black;}
+.select .selectup .page a{
+	height:16px;width:48px;
+	line-height:16px;font-size:12px;
+	color:black;border:1px solid #ccc;
+	display: inline-block;
+}
+
+.selectub{height:34px;}
+.select .selectub .ozer{height:34px;width:auto;}
+.select .selectub .ozer ul li{
+	height:34px;
+	width:74px;
+	border-left:1px solid #ccc;
+	float:left;
+}
+.select .selectub .ozer ul li a{
+	font-size:12px;
+	display:inline-block;
+	text-align:center;
+	color:black;
+	height:34px;
+	width:24px;
+	line-height:34px;
+	margin-left:15px;
+}
+.select .selectub .ozer ul li a:hover{color:#b81c22;}
+.select .selectub .ozer ul li:last-child{background:#ededed;}
+.select .selectub .ozer ul li div p{display:block;background:#ededed;}
+.select .selectub .ozer ul li div p:hover{display:block;background:white;}
+
+.select .selectub .ozer ul li span{
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    line-height: 11px;
+    margin-left: 0px;
+    vertical-align: middle;
+    background: url(../image/sprites_20130606.png) no-repeat 0px -3090px;
+}
+.select .selectub .ozer ul .new span{
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    line-height: 11px;
+    margin-left: 0px;
+    vertical-align: middle;
+    background: url(../image/sprites_20130606.png) no-repeat 0px -3112px;
+}
+.select .selectub .ozer ul li div .jia{ background: url(../image/sprites_20130606.png) no-repeat 0px -3090px;}
+.select .selectub .ozer ul li div{display:none;}
+.select .selectub .ozer ul li:hover div{display:block;}
+.select .selectub .area{height:34px;width:135px;margin-left:25px;background: white;}
+.select .selectub .area input{height:19px;width:40px;}
+.select .selectub .area div{height:34px;width:135px;background: white;padding-top:5px;display:none;}
+.select .selectub .area div input{margin-left:8px;}
+.select .selectub .area form input:focus+div{display:block;}
+.select .selectub .area span{color:#ccc;}
+.select .selectub .bing{height:34px;width:89px;background:#ededed;}
+.select .selectub .bing p{font-size:12px;line-height:34px;text-align:center;}
+/*typegoods*/
+.typegoods{height:auto;}
+.typegoods ul li{
+	height:300px;
+	width:230px;
+	float:left;
+	margin-right:9px;
+	margin-top:9px;
+}
+.typegoods ul li img{
+	width:230px;
+	height:230px;
+}
+.typegoods ul li img:hover{border:1px solid #a10000;}
+.typegoods ul li .tit{
+	width:230px;
+	height:43px;
+	text-align:center;
+	line-height:43px;
+	color:#ccc;
+}
+.typegoods ul li .tit a{
+	font-size:12px;
+}
+.typegoods ul li .price{
+	width:230px;
+	height:20px;
+	text-align:center;
+	font-size:16px;
+	line-height:20px;
+	color:#a10000;
+}
+.typegoods ul .first{
+	margin-left:5px;
+}
+.blank0{height:100%;height:30px;}
+/*listfp*/
+.listfp{height: 26px;margin-top:20px;}
+.listfp .pageare{width:320px;height:26px;}
+.listfp .pageare p{font-size:12px;color:#ccc;font-style:normal;}
+.listfp .pageare strong{font-size:12px;color:#ccc;font-style:normal;margin-left:5px;}
+.listfp .pageare span{font-size:12px;color:#ccc;font-style:normal;margin-right:5px;display:inline-block;width:26px;height:26px;color:white;text-align:center;background:#a10000;line-height:26px;}
+.listfp .pageare em{font-size:12px;color:#ccc;font-style:normal;}
+.listfp .pageare a{font-size:12px;color:#ccc;font-style:normal;display:inline-block;margin-right:5px;border:1px solid #ccc;width:50px;height:16px;line-height:16px;}
+.listfp .pageare a:hover{color:#a10000;}
+.cls1{width:22px;height:22px;line-height:24px;}
+.cls2{width:50px;height:26px;line-height:26px;background:#a10000;margin-left:5px;border-radius:4px;display:inline-block;color:white;}
+
+
+
+
+
+

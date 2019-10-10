@@ -1,0 +1,20 @@
+
+.success .center{width:980px;height:auto;border:1px solid #ccc;margin:20px auto;border:1px solid #ccc;}
+.success .center .success_cen_lef{
+	width:60%;height:168px;
+}
+.success .center .success_cen_lef p{
+	font-size:14px;color:black;margin-top:20px;
+}
+.success .center .success_cen_lef span{
+	color:#a10000;
+}
+.success .center .success_cen_rgt{
+	width:39%;height:168px;
+}
+.success .center .success_cen_rgt img{margin-left:236px;}
+.success .center .tishimsg{text-align:center;font-size:14px;color:black;margin-top:20px;}
+.success .center .jump{text-align:right;font-size:14px;margin-top:20px;margin-right:150px;}
+.success .center .jump a{color:#a10000;margin-left:10px;}
+
+

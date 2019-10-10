@@ -1,0 +1,101 @@
+/*头部样式*/
+.loginhead{height:50px;margin:10px auto;}
+.loginhead p em{font-size:12px; width:auto;height:50px; display:inline-block;line-height:50px;font-style:normal;}
+/*登录图片*/
+.logincenter{height:471px;}
+/*左*/
+.logincenter .loginimg{width:auto;height:471px;}
+.logincenter .loginimg img{width:465px;height:352px;margin-left:120px;margin-top:60px;}
+/*右*/
+.logincenter .loginfom{height:471px;width:400px;margin-right:100px;}
+.logincenter .loginfom .tishi{height:25px;}
+.logincenter .loginfom .tishi h3{font-size:18px;display:inline-block;font-weight:bold;color:#ccc;float:left;}
+.logincenter .loginfom .tishi span{font-size:12px;display:inline-block;color:#ccc;float:right;height:25px;line-height:25px;}
+.logincenter .loginfom .tishi span a{font-size:12px;color:#ccc;float:right;height:25px;line-height:25px;color:#b42025;}
+.logincenter .loginfom .login_fom_ipt{width:400px;height:auto;margin-top:20px;}
+.logincenter .loginfom .login_fom_ipt .login_fom_ipt_head
+{
+	width:400px;
+	height:35px;
+	border:1px solid #ccc;
+}
+.logincenter .loginfom .login_fom_ipt .login_fom_ipt_head ul li{
+	width:200px;
+	height:35px;
+	line-height:35px;
+	font-size:12px;
+	background: #f5f5f5;
+	float:left;
+	text-align:center;
+}
+.logincenter .loginfom .login_fom_ipt .login_fom_ipt_head ul .on{background:#b42025;color:white;}
+.logincenter .loginfom .login_fom_ipt .user_info{
+	padding-top:10px;
+	height:243px;
+	border:1px solid #ccc;
+	border-bottom:none;
+}
+.logincenter .loginfom .login_fom_ipt .user_info input{
+	width:360px;
+	height:45px;
+	border:1px solid #ccc;
+	display:block;
+	margin-left:20px;
+	margin-top:25px;
+	text-indent: 2em;
+}
+.logincenter .loginfom .login_fom_ipt .user_info .one{
+	width:360px;
+	height:45px;
+	border:none;
+	background:#b42025;
+	display:block;
+	margin-left:20px;
+	margin-top:0px;
+	font-size:16px;
+	color:white;
+}
+.logincenter .loginfom .login_fom_ipt .user_info a{
+	display:block;
+	width:56px;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	color:#b42025;
+	margin-left:300px;
+	margin-top:25px;
+	font-weight:bold;
+}
+.logincenter .loginfom .login_fom_ipt .otherlogin{
+	height:77px;
+	margin-top:25px;
+}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter{
+	width:360px;
+	height:77px;
+	margin:0 auto;
+}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter p{
+	font-size:14px;color:#ccc;margin-top:15px;font-weight:bold;
+}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul{margin-top:5px;}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li{
+	width:33px;
+	height:33px;
+	float:left;
+	background:green;
+	margin-left:10px;	 
+}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li a{
+	width:33px;
+	height:33px;
+	display:block; 
+}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li .a1{background: url('../image/logos.jpg') no-repeat left center;}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li .a2{background: url('../image/logos.jpg') no-repeat -147px center;}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li .a3{background: url('../image/logos.jpg') no-repeat -48px center;}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li .a4{background: url('../image/logos.jpg') no-repeat -189px center;}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li .a5{background: url('../image/logos.jpg') no-repeat -228px center;}
+.logincenter .loginfom .login_fom_ipt .otherlogincenter ul li .a6{background: url('../image/logos.jpg') no-repeat -93px center;}
+
+

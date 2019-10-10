@@ -1,0 +1,78 @@
+用户表  user
+id 
+name
+is_admin 是否管理员
+status 
+up_time
+cr_time 
+用户=>角色
+
+角色表 role
+ id 
+ name
+ status
+ up_time
+ cr_time
+ 
+权限表
+id 
+title 
+status
+ up_time
+ cr_time
+ 
+ 权限=>角色权限
+ 
+角色关系表  user_role
+id 
+uid 用户id
+roid_id 角色id、
+cr_time
+
+角色权限关系表 role——permission
+id 
+role_id 角色id、
+permission_id 对应权限表id
+cr_time 
+
+
+
+
+redis
+
+public function show(){
+//商品id 数组
+$listshop=[];
+//商品内容 数组
+$listshopcontent=[];
+
+	if(redis中要存在的要使用的数据，直接返回)(\REDIS::exists('商品id'))
+	{
+	  //获取数据的id
+		$shopinfo=\Redis::lrange($listshop,0,-1);(0,-1表示全部)
+		//此处定义的空数组用于存放商品内容
+		$shopcontent=[];
+		//遍历所有商品的id
+		foreach($shopinfo as $v)
+		{
+			//依靠id 来获取redis内的商品内容
+			$shopcontent=Redis::hgetall($listshopcontent.$v);
+		}
+	}
+	else
+	{
+	 链接数据库 取值
+	 $data=数据库：：get->toArray();
+	 //取出的id值放入redis
+	 foreach($art as $v )
+	 {
+	 	Redis：：rpush($listshop,$v['id'])
+	 	//存放键值对进redis
+	 	Redis::hmset($listshopcontent,$v['id'],$v);
+	 }
+	 
+	}
+	
+	return redirect('list',compact('data'));
+	
+}
