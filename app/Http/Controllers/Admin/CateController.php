@@ -79,7 +79,7 @@ class CateController extends Controller
 		]
 		);
 		Cate::create([
-			'name' => $name,
+			'name' => $name
 		]);
 				
 		return [

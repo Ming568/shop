@@ -40,10 +40,17 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'login'],func
 	Route::match(['get','post'],'update','CateController@update');
 	//处理分类数据
 	Route::match(['post','get'],'add','CateController@add');
-	//商品管理
+	//商品管理展示
 	Route::get('goodlist','GoodController@show');
-	//商品添加
+	//商品添加表单渲染
 	Route::match(['post','get'],'addgood','GoodController@addGood');
+	//商品信息添加
+	Route::match(['post','get'],'addgoods','GoodController@addGoods');
+	//商品信息删除
+	Route::get('shopdel','GoodController@shopDel');
+	//商品信息修改
+	Route::match(['post','get'],'shopalter/{id}','GoodController@shopAlter');
+	Route::match(['post','get'],'shopupdate','GoodController@shopUpdate');
 });
 //验证码路由
 Route::get('/code/captcha/{tmp}','Admin\LoginController@captcha');
