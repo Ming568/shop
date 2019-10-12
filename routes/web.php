@@ -9,6 +9,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//------------------前台Home
+//前台登录界面
+
+
+
+
 //HOME首页
 Route::get('/','Home\IndexController@index');
 Route::group(['prefix'=>'home','namespance'=>'Home'],function(){
@@ -52,6 +58,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'login'],func
 	Route::match(['post','get'],'shopalter/{id}','GoodController@shopAlter');
 	Route::match(['post','get'],'shopupdate','GoodController@shopUpdate');
 });
-//验证码路由
+//后台验证码路由
 Route::get('/code/captcha/{tmp}','Admin\LoginController@captcha');
 

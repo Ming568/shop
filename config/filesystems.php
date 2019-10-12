@@ -46,7 +46,7 @@ return [
         'local' => [
             'driver' => 'local',
 //          'root' => storage_path('app'),
-			'root' => public_path('uplode'),
+			'root' => public_path(),
         ],
 
         'public' => [

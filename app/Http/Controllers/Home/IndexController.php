@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Admin\Goods;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -9,25 +10,44 @@ class IndexController extends Controller
 {
     public function index(Request $request)
     {
+    	//ajax
     	if($request->ajax())
     	{
-    		for($a=0;$a<4;$a++)
-    		{
-    			echo "<div id='shop' class='col-md-3'>
-				<div class='thumbnail'>
-					<a href='#'>
-						<img src='/Home/image/6375344-1j201710181702562128.jpg' alt='暂无商品信息' title='购买'/>
-					</a>
-					<div class='caption'>	
-						<p><span style='color:orange;'>商品详情</span></p>
-						<p><i>￥125</i><a href='#'>点击查看</a></p>
-					</div>
-				</div>
-				</div>";
-    		}
+    		$shopInfo=Goods::all();
+			foreach($shopInfo as $v)
+			{
+				//过滤失效的商品
+				if($v->status != 3)
+				{
+					echo "<div id='shop' class='col-md-3'>
+							<div class='thumbnail'>
+							<a href='#'>
+									<img src='/Admin/shoppic/$v->pic' alt='暂无商品信息' title='购买' style='width:100%;height:150px;'/>
+								</a>	
+							<div class='caption'>	
+									<p><span style='color:orange;'>
+									 		<div style='white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:200px;' >
+					                         	<span>商品详情:</span>&nbsp;<span style='color:red;'>$v->descript</span>
+					                        </div>	
+					                    </span></p>";
+					                    if($v->status == 1)
+										{
+											echo "<p style='float:left;color:green;font-size:15px;'>
+														新品
+												  </p>";
+										}
+					echo "<i style='font-size:15px;color:orange'>￥$v->price</i>
+							<p><a href='#'>点击查看</a></p>
+								</div>
+							</div>
+						</div>";
+				}
+				
+			} 			
     	}else
     	{
-    		return view('home.index');
+    		$shopInfo=Goods::all();
+    		return view('home.index',['shopInfo'=>$shopInfo]);
     	}
     	
     }

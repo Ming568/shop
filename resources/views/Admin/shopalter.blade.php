@@ -18,7 +18,6 @@
                     	<option value="{{$date['tid']}}">{{ $date['name'] }}</option>
                     </select>
                   </div>
-                  
                   <div class="form-group">
                     <label for="example-nf-password">价格</label>
                     <input class="form-control" type="text" id="example-nf-password" name="price" placeholder="价格" value="{{$date['price']}}">
@@ -52,6 +51,26 @@
                     @endswitch		
                   </div>
                   <div class="form-group">
+                    <label for="example-nf-email">颜色:</label>
+                    @switch($date['color'])
+                    	@case(1)
+                    		  <input type="radio"  name="color" value="1" checked="checked">粉
+                    		  	<input type="radio" name="color" value="2" >红
+                    		  		<input type="radio"  name="color" value="3">蓝
+                    		@break
+                    	@case(2)
+                    			<input type="radio"  name="color" value="1" >粉
+                    		  	<input type="radio"  name="color" value="2" checked="checked">红
+                    		  		<input type="radio"  name="color" value="3" >蓝
+                    		@break
+                    	@case(3)
+                    			<input type="radio" name="color" value="1" >粉
+                    		  	<input type="radio"  name="color" value="2" >红
+                    		  		<input type="radio" name="color" value="3" checked="checked">蓝
+                    		@break
+                    @endswitch		
+                  </div>
+                  <div class="form-group">
                     <button class="btn btn-primary" type="submit" id="butt">添加</button>
                   </div>
                 </form>
@@ -74,6 +93,8 @@
 	   		let status=document.form.status;
 	   		//时间
 	   		let shopaddtime=document.form.addtime;
+	   		//颜色
+	   		let shopcolor=document.form.color;
 	   		//id
 	   		let shopid=document.form.id;
          	$.ajaxSetup({
@@ -96,11 +117,12 @@
 									'price':shopprice.value,
 									'store':shopstroe.value,
 									'descript':shopdesc.value,
+									'color':shopcolor.value,
 									'status':status.value,
 									'_token':'{{ csrf_token() }}'
           	 		},
           	 		async:true,
-          	 		success:function()
+          	 		success:function(res)
           	 		{
           	 			alert('修改成功');
           	 			location.href="{{ url('admin/goodlist') }}"
@@ -111,5 +133,5 @@
           	 		}
           	 	});
           	});
-          </script>
+         </script>
 @endsection

@@ -162,59 +162,36 @@
 	<div class="add wc"><a href="#"><img src="{{url('/Home/image/czt.jpg')}}" alt=""></a></div>
 	<div class="wc"><img src="{{url('/Home/image/123_01.jpg')}}" alt=""></div> 
 	<!-- ######################################商品渲染##################################### -->	
-	<div class="ngs wc col-md-12" id="panelBody" style="height:400px;" >
-			<div id="shop" class="col-md-3">
-				<div class="thumbnail">
-					<a href="#">
-						<img src="/Home/image/6375344-1j201710181702562128.jpg" alt="暂无商品信息" title="购买">
-					</a>
-				<div class="caption">	
-					<p><span style="color:orange;">商品详情</span></p>
-					<p><i>￥125</i><a href="#">点击 查看</a></p>
-				</div>
-			</div>
-			</div>
-			<div id="shop" class="col-md-3">
-				<div class="thumbnail">
-					<a href="#">
-						<img src="/Home/image/6375344-1j201710181702562128.jpg" alt="暂无商品信息" title="购买">
-					</a>
-				<div class="caption">	
-					<p><span style="color:orange;">商品详情</span></p>
-					<p><i>￥125</i><a href="#">点击 查看</a></p>
-				</div>
-			</div>
-			</div>
-			<div id="shop" class="col-md-3">
-				<div class="thumbnail">
-					<a href="#">
-						<img src="/Home/image/6375344-1j201710181702562128.jpg" alt="暂无商品信息" title="购买">
-					</a>
-				<div class="caption">	
-					<p><span style="color:orange;">商品详情</span></p>
-					<p><i>￥125</i><a href="#">点击 查看</a></p>
-				</div>
-			</div>
-			</div>
-			<div id="shop" class="col-md-3">
-				<div class="thumbnail">
-					<a href="#">
-						<img src="/Home/image/6375344-1j201710181702562128.jpg" alt="暂无商品信息" title="购买">
-					</a>
-				<div class="caption">	
-					<p><span style="color:orange;">商品详情</span></p>
-					<p><i>￥125</i><a href="#">点击 查看</a></p>
-				</div>
-			</div>
-			</div>
+	<div class="ngs wc col-md-12" id="panelBody" style="height:1000px" >
+		@foreach($shopInfo as $v)
+			@if($v->status !=3)
+				<div id='shop' class='col-md-3'>
+					<div class='thumbnail'>
+						<a href='#'>
+							<img src='/Admin/shoppic/{{$v->pic}}' alt='暂无商品信息' title='购买' style='width:100%;height:150px;'/>
+						</a>	
+						<div class='caption'>	
+							<p><span style='color:orange;'>
+								<div style='white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:200px;' >
+					              <span>商品详情:</span>&nbsp;<span style='color:red;'>{{$v->descript}}</span>
+					            </div>	
+					              </span></p>
+					              @if($v->status == 1)
+					              	<p style='float:left;color:green;font-size:15px;'>新品</p>
+					              @endif
+					         <i style='font-size:15px;color:orange'>￥{{$v->price}}</i>
+							<p><a href='#'>点击查看</a></p>
+							</div>
+							</div>
+						</div>
+			@endif
+		@endforeach
 			<div id="load"style="text-align: center; width:100%"></div>
 	</div>
-		
 	<!-- #######################################分割线##################################### -->
-	
-	<div class="pic_type wc" style="margin-top:1024px"></div>
+	<div class="pic_type wc" style="margin-top:auto;position:absolute;"></div>
 	<!-- #######################################分割线##################################### -->
-	<div class="wc"  style="height:32px;background: #fff;border:1px solid red;">
+	<div class="wc"  style="height:32px;background:grey;">
 		<p id="stop_show" style="text-align: center;font-size:20px;">12312</p>
 	</div>
 	<!-- 首页内容结束 -->
@@ -254,8 +231,8 @@
 	<div style="clear:both;"></div>
 	<!-- 关于我们结束 -->
 	<!-- frend-link start-->
-	<div class="youlian wc">
-		<div class="youlian_main" id="youlian_main">
+	<div class="youlian wc"  style="position:absolute;>
+		<div class="youlian_main" id="youlian_main"">
 		<p class="fl">友情链接:</p>
 		@verbatim
 		<ul class="fl" v-for="v in li">
@@ -373,18 +350,18 @@
 		//截取div的高度，转换成Number
 		let nowHeights=Number(divStyle.substr(7,3));
 		//触发加载高度
-		let touchHeight=(scrollTop+600+canUseScreen)+nowHeights;
+		let touchHeight=(scrollTop+500+canUseScreen)+nowHeights;
 		console.log(touchHeight,height);
 		//触发返回内容
 		if(touchHeight > height)
 		{
-			if(touchHeight<3400)
+			if(touchHeight<2400)
 			{	
 				onload();
 			}
 			if(touchHeight>3100)
 			{
-				return  document.getElementById('stop_show').innerText="到底了";
+				return document.getElementById('stop_show').innerText="到底了";
 			}
 		}
 		function onload(){
@@ -400,7 +377,8 @@
 				{
 					if(aj.readyState==4 && aj.status==200)
 					{
-						document.getElementById('load').innerHTML= document.getElementById('load').innerHTML + aj.responseText;
+						document.getElementById('load').innerHTML= aj.responseText;
+//						 document.getElementById('load').innerHTML +
 					}
 				}
 				aj.open('GET','',true);

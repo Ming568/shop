@@ -11,5 +11,5 @@ class Goods extends Model
 	//取消默认时间字段
 	public $timestamps=false;
 	//设置白名单
-	protected $fillable=['tid','name','price','store','descript','addtime','status'];
+	protected $fillable=['tid','name','price','store','descript','addtime','color','status','pic'];
 }
