@@ -136,7 +136,6 @@
 							<a href="">{{message.li22}}</a>
 						</div>
 					</li>
-					
 					<div class="clear"></div>
 				</ul>
 			</div>
@@ -162,7 +161,8 @@
 	<div class="add wc"><a href="#"><img src="{{url('/Home/image/czt.jpg')}}" alt=""></a></div>
 	<div class="wc"><img src="{{url('/Home/image/123_01.jpg')}}" alt=""></div> 
 	<!-- ######################################商品渲染##################################### -->	
-	<div class="ngs wc col-md-12" id="panelBody" style="height:1000px" >
+	<div class="ngs wc col-md-12" id="panelBody" style="height:auto;">
+		
 		@foreach($shopInfo as $v)
 			@if($v->status !=3)
 				<div id='shop' class='col-md-3'>
@@ -189,14 +189,13 @@
 			<div id="load"style="text-align: center; width:100%"></div>
 	</div>
 	<!-- #######################################分割线##################################### -->
-	<div class="pic_type wc" style="margin-top:auto;position:absolute;"></div>
 	<!-- #######################################分割线##################################### -->
-	<div class="wc"  style="height:32px;background:grey;">
+	<!--<div class="wc"  style="height:32px;background:grey;">
 		<p id="stop_show" style="text-align: center;font-size:20px;">12312</p>
-	</div>
+	</div>-->
 	<!-- 首页内容结束 -->
 	<!-- 关于我们开始 -->
-	<div class="aboutare">
+<div id="footer" style="width:100%;">
 		<div class="about">
 			<ul>
 				<li>
@@ -206,19 +205,22 @@
 					</div>
 				</li>
 				<li>
-					<p class="p3"><img src="{{url('/Home/image/seven.png')}}" alt=""></p>
-					<p class="p4">7天内退换货</p>
-					<p class="p4">购物满199元免邮费</p>
+					<div>
+						<p class="p3"><img src="{{url('/Home/image/seven.png')}}" alt=""></p>
+						<p class="p4">7天内退换货</p>
+						<p class="p4">购物满199元免邮费</p>
+					</div>
 				</li>
 				<li>
-					<p class="p5"><img src="{{url('/Home/image/2014_8_29_16_39_33_7709.jpg')}}" alt=""></p>
-					<p class="p6">扫码下载凡客客户端</p>
+					<div>
+						<p class="p5"><img src="{{url('/Home/image/2014_8_29_16_39_33_7709.jpg')}}" alt=""></p>
+						<p class="p6">扫码下载凡客客户端</p>
+					</div>
 				</li>
 				<div class="clear"></div>
 			</ul>
-			
 		</div>
-		<div >
+		<div>
 			@verbatim
 				<div class="links" id="links">
 					<ul v-for="Info in link_ul">
@@ -227,12 +229,12 @@
 				</div>
 			@endverbatim
 		</div>
-	</div>
+	
 	<div style="clear:both;"></div>
 	<!-- 关于我们结束 -->
 	<!-- frend-link start-->
-	<div class="youlian wc"  style="position:absolute;>
-		<div class="youlian_main" id="youlian_main"">
+	<div class="youlian wc">
+		<div class="youlian_main" id="youlian_main">
 		<p class="fl">友情链接:</p>
 		@verbatim
 		<ul class="fl" v-for="v in li">
@@ -244,9 +246,9 @@
 		</div>
 	</div>
 	<!-- frend  link  end-->
-	<hr width="100%" size="1" color="black" style="margin-top:25px;">
+	<hr width="100%" size="1" color="black" style="margin-top:30px;">
 	<!-- 脚步开始 -->
-	<div class="foot">
+	<div class="foot" style="position:absolute;">
 		<div class="footBottomTab">
 			<p> Copyright 2018 - 2018 vancl.com All Rights Reserved 京ICP证100557号   京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p>
 			<p>凡客诚品（北京）科技有限公司</p>
@@ -261,6 +263,7 @@
 			</div>	
 		</div>
 	</div>
+</div>
 	<!-- 脚步结束 -->
 </body>
 </html>
@@ -329,7 +332,8 @@
 				li4:'前程无忧4',
 				li5:'前程无忧5',
 				li6:'前程无忧6',
-				li7:'更多'
+				li7:'前程无忧7',
+				li8:'更多'
 			}	
 		}
 	});
@@ -345,24 +349,16 @@
 		let scrollTop=document.documentElement.scrollTop;
 		//获取当前可见的区域高度
 		let canUseScreen=screen.availHeight;
-		let nowHeight=document.querySelector('#panelBody');
-		let divStyle= nowHeight.getAttribute('style');
-		//截取div的高度，转换成Number
-		let nowHeights=Number(divStyle.substr(7,3));
+//		let nowHeight=document.querySelector('#panelBody');
+//		let divStyle= nowHeight.getAttribute('style');
+//		//截取div的高度，转换成Number
+//		let nowHeights=Number(divStyle.substr(7,3));
 		//触发加载高度
-		let touchHeight=(scrollTop+500+canUseScreen)+nowHeights;
-		console.log(touchHeight,height);
+		let touchHeight=(scrollTop+canUseScreen);
 		//触发返回内容
-		if(touchHeight > height)
+		if(touchHeight >1900)
 		{
-			if(touchHeight<2400)
-			{	
-				onload();
-			}
-			if(touchHeight>3100)
-			{
-				return document.getElementById('stop_show').innerText="到底了";
-			}
+			onload();
 		}
 		function onload(){
 			  let aj;
