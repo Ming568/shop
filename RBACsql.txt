@@ -37,7 +37,6 @@ cr_time
 
 
 
-
 redis
 
 public function show(){
@@ -64,7 +63,7 @@ $listshopcontent=[];
 	 链接数据库 取值
 	 $data=数据库：：get->toArray();
 	 //取出的id值放入redis
-	 foreach($art as $v )
+	 foreach($data as $v )
 	 {
 	 	Redis：：rpush($listshop,$v['id'])
 	 	//存放键值对进redis

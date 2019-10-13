@@ -1,22 +1,49 @@
 <?php
 
 namespace App\Http\Controllers\Home;
-
+use Illuminate\Support\Facades\Redis;
 use App\Admin\Goods;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
+	//商品渲染
     public function index(Request $request)
     {
     	//ajax
     	if($request->ajax())
     	{
-    		//跳过前10条数据
-    		$shopInfo=Goods::offset(10)
-    		->limit(10)
-    		->get();
+    		//定义两个键
+    		$shopkey='LIST:shopkey';
+			$shophash='HSAH:shopContent:';
+			if(Redis::exists($shopkey))
+    		{
+    			//获取所有商品的ID
+    			$AllId=Redis::lrange($shopkey,0,-1);
+    			foreach($AllId as $k=>$v)
+    			{
+    				//把商品内容和商品ID相关联
+    				$shopContent[]=Redis::hgetall($shophash.$v);
+    			}
+    		}else
+    		{
+//    			没有radis缓存,查询前十条数据，存入redis,剩下的由AJAX加载出来
+    			$shopInfo=Goods::offset(10)
+    			->limit(10)
+    			->get()->toArray();
+    			//存入redis
+    			 foreach($shopInfo as $v)
+				 {
+				 	//将商品ID存入$shopkey中
+				 	Redis::rpush($shopkey,$v['id']);
+				 	//将商品内容放入shophash中
+				 	Redis::hmset($shophash.$v['id'],$v);
+				 }
+    		}	//跳过前10条数据
+//  		$shopInfo=Goods::offset(10)
+//  		->limit(10)
+//  		->get();
 			foreach($shopInfo as $v)
 			{
 				//过滤失效的商品
@@ -51,9 +78,34 @@ class IndexController extends Controller
 			} 			
     	}else
     	{
-    		//查询前十条数据，剩下的由AJAX加载出来
-    		$shopInfo=Goods::limit(10)->get();
-    		return view('home.index',['shopInfo'=>$shopInfo]);
+			//定义两个键
+			$shopkey='LIST:shopkey';
+			$shophash='HSAH:shopContent:';
+    		//判断radis中是否有商品信息
+    		if(Redis::exists($shopkey))
+    		{
+    			//获取所有商品的ID
+    			$AllId=Redis::lrange($shopkey,0,-1);
+    			foreach($AllId as $k=>$v)
+    			{
+    				//把商品内容和商品ID相关联
+    				$shopContent[]=Redis::hgetall($shophash.$v);
+    			}
+    		}else
+    		{
+    			
+//    			没有radis缓存,查询前十条数据，存入redis,剩下的由AJAX加载出来
+    			$shopInfo=Goods::limit(10)->get()->toArray();
+    			//存入redis
+    			 foreach($shopInfo as $v)
+				 {
+				 	//将商品ID存入$shopkey中
+				 	Redis::rpush($shopkey,$v['id']);
+				 	//将商品内容放入shophash中
+				 	Redis::hmset($shophash.$v['id'],$v);
+				 }
+    		}
+    		return view('home.index', compact('shopContent'));
     	}
     	
     }

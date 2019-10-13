@@ -86,7 +86,7 @@
 		                       	 @endswitch
                         <td>
                           <div class="btn-group" style="width:80px">
-                            <a class="btn btn-xs btn-default" href="{{url('admin/shopalter')}}/{{$v->id}}"  title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="{{url('admin/shopalter')}}/{{$v->id}} edit"  title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
                             <a class="btn btn-xs btn-default" title="删除" data-toggle="tooltip" onclick="del({{$v->id}})"><i class="mdi mdi-window-close"></i></a>
                           </div>
                         </td>
