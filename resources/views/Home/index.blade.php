@@ -5,6 +5,7 @@
 	<title>凡客商城</title>
 	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script> 
 	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="shortcut icon" href="{{url('/Home/image/4.ico')}}" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="{{ asset('/Home/css/common.css') }}">
@@ -62,12 +63,6 @@
 							</p>
 							<div class="tiao"></div>
 							<div class="shopinglist">
-								<p>没有任何商品购买</p>
-								<p>没有任何商品购买</p>
-								<p>没有任何商品购买</p>
-								<p>没有任何商品购买</p>
-								<p>没有任何商品购买</p>
-								<p>没有任何商品购买</p>
 								<p>没有任何商品购买</p>
 								<p>没有任何商品购买</p>
 							</div>

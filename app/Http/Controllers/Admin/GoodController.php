@@ -16,6 +16,28 @@ class GoodController extends Controller
 		//如果是AJAX请求，则输出表格给前台
 		if($request->ajax())
 		{
+			//ajax分页
+				//数据总数
+				$shopSum=Goods::count();
+				//设置显示条数
+				$showrow=3;
+				//获取最大页码
+				$maxRow=ceil($shopSum/$showrow);
+				//获取附加参数
+				$page=$request->input('page');
+				dump($page);
+				//防止越界
+				if(empty($page))
+				{
+					$page=1;
+				}
+				$up=($page-1)>0?$page-1:1;
+				//下页
+				$down=($page+1)<$maxRow?$page+1:$maxRow;
+				//偏移量
+				$offset=($page-1)*$showrow;
+				dump($up,$down,$offset);
+			
 			//商品信息
 			$shopInfos=Goods::where('name','like','%'.$searchName.'%')->get();
 			//类型信息
@@ -32,11 +54,12 @@ class GoodController extends Controller
                         <th>库存</th>
                         <th>商品描述</th>
                         <th>添加时间</th> 
-                        <th>颜色</th>
+                        <th style='width:50px;height:40px'>颜色</th>
                         <th>商品状态</th>
                         <th>操作</th>
                       </tr>
-                    </thead>";
+                    </thead>	
+                    ";
                   foreach($shopInfos as $k=>$v)
 					{
 						//设置键值从1开始累加,作为ID号
@@ -93,12 +116,14 @@ class GoodController extends Controller
 		                            <a class='btn btn-xs btn-default'  title='删除' data-toggle='tooltip' onclick='del($v->id)'><i class='mdi mdi-window-close'></i></a>
 		                          </div>
 		                        </td>
-		                        </tr>";	                        
+		                        </tr>"; 
+								
 					}
+					
 				}else
 				{
 					//商品信息
-					$shopInfos=Goods::all();
+					$shopInfos=Goods::paginate(3);
 					//分类信息
 					$typeInfo=Cate::all();
 			    	return view('Admin.goodlist',['shopInfos'=>$shopInfos])->with('typeInfo',$typeInfo);

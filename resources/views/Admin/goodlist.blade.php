@@ -94,6 +94,9 @@
                       @endforeach
                     </tbody>
                   </table>
+                   <div>
+                   		{{$shopInfos->links()}}
+                   </div>
                 </div>
               </div>
             </div>
@@ -155,5 +158,25 @@
 				aj.setRequestHeader('x-requested-with', 'XMLHttpRequest');
 				aj.send();
           	  }
+          </script>
+          <!--ajax分页-->
+          <script>
+          		function page(page)
+          		{	
+          			$.ajax({
+          				type:"get",
+          				url:"{{url('admin/goodlist')}}",
+          				data:{'page':page},
+          				async:true,
+          				success:function()
+          				{
+          					
+          				},
+          				error:function()
+          				{
+          					
+          				}
+          			});
+          		}
           </script>
 @endsection
