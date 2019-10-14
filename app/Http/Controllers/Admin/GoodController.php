@@ -13,35 +13,11 @@ class GoodController extends Controller
     public function show(Request $request)
     {
     	$searchName=$request->input('name');
+		//获取附加参数
+		$page=$request->input('page');
 		//如果是AJAX请求，则输出表格给前台
 		if($request->ajax())
 		{
-			//ajax分页
-				//数据总数
-				$shopSum=Goods::count();
-				//设置显示条数
-				$showrow=3;
-				//获取最大页码
-				$maxRow=ceil($shopSum/$showrow);
-				//获取附加参数
-				$page=$request->input('page');
-				dump($page);
-				//防止越界
-				if(empty($page))
-				{
-					$page=1;
-				}
-				$up=($page-1)>0?$page-1:1;
-				//下页
-				$down=($page+1)<$maxRow?$page+1:$maxRow;
-				//偏移量
-				$offset=($page-1)*$showrow;
-				dump($up,$down,$offset);
-			
-			//商品信息
-			$shopInfos=Goods::where('name','like','%'.$searchName.'%')->get();
-			//类型信息
-			$typeInfos=Cate::all();
 				echo "
 				<table class='table table-bordered'>
 					<thead>
@@ -58,8 +34,41 @@ class GoodController extends Controller
                         <th>商品状态</th>
                         <th>操作</th>
                       </tr>
-                    </thead>	
-                    ";
+                    </thead>";
+					//ajax分页
+				//数据总数
+				$shopSum=Goods::count();
+				//设置显示条数
+				$showrow=3;
+				//获取最大页码
+				$maxRow=ceil($shopSum/$showrow);
+				//防止越界
+				if(empty($page))
+				{
+					$page=1;
+				}
+				$up=($page-1)>0?$page-1:1;
+				//下页
+				$down=($page+1)<=$maxRow?$page+1:$maxRow;
+				//偏移量
+				$offset=($page-1)*$showrow;
+				//商品信息
+				$shopInfos=Goods::where('name','like','%'.$searchName.'%')
+				->offset($offset)
+				->limit($showrow)
+				->get();
+				echo " 
+					<div>
+						<ul class='pagination pagination-md'>
+						<li><a href='javascript:void(0)' onclick='page(1)'>首页</a></li>
+					    <li><a href='javascript:void(0)' onclick='page($up)'>&lt</a></li>
+					    <li><a href='javascript:void(0)' onclick='page($down)'>&gt</a></li>
+					    <li><a href='javascript:void(0)' onclick='page($maxRow)'>尾页</a></li>
+					    </ul>
+					</div>    
+					   ";
+				//类型信息
+				$typeInfos=Cate::all();
                   foreach($shopInfos as $k=>$v)
 					{
 						//设置键值从1开始累加,作为ID号
@@ -117,7 +126,6 @@ class GoodController extends Controller
 		                          </div>
 		                        </td>
 		                        </tr>"; 
-								
 					}
 					
 				}else

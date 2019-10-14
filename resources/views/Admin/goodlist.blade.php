@@ -24,6 +24,9 @@
               </div>
               <div class="card-body">
                 <div class="table-responsive" id="back">
+                	<div>
+	                   	{{$shopInfos->links()}}
+	               </div>
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -94,11 +97,11 @@
                       @endforeach
                     </tbody>
                   </table>
-                   <div>
-                   		{{$shopInfos->links()}}
-                   </div>
+                    
                 </div>
+	               
               </div>
+              	
             </div>
      	</div>
      	 <script type="text/javascript" src="{{ asset('/Admin/js/jquery.min.js') }}"></script>
@@ -159,24 +162,23 @@
 				aj.send();
           	  }
           </script>
-          <!--ajax分页-->
-          <script>
-          		function page(page)
-          		{	
-          			$.ajax({
-          				type:"get",
-          				url:"{{url('admin/goodlist')}}",
-          				data:{'page':page},
-          				async:true,
-          				success:function()
-          				{
-          					
-          				},
-          				error:function()
-          				{
-          					
-          				}
-          			});
-          		}
-          </script>
+		<!--ajax分页-->
+          	<script>
+					function page(page)
+				  	{	
+				        $.ajax({
+				   					type:'get',
+				          			url:'/admin/goodlist',
+				          			data:{'page':page},
+				          			async:true,
+				          			success:function(res)
+				          			{
+				          				if(res)
+				          				{
+				          					$('#back').html(res);
+				          				}
+				          			}
+				          		});
+				    }
+			</script> 
 @endsection
